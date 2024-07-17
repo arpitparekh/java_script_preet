@@ -3,6 +3,7 @@ let b = 12.34            // float
 let c = "Hello World"    // string
 
 let d = false        // boolean
+
 let e = true
 let f = null
 
@@ -14,3 +15,7 @@ g = "Helloi"
 g = 34.34
 
 console.log(g)
+
+let h =34 
+console.log(h)
+console.log("sdzdsadsadsadad " + h)
