@@ -55,3 +55,21 @@ switch (value) {
         break
 }
 
+// Traffic Light: Write a JavaScript program that prints a message based on the
+// color of a traffic light(Red, Yellow, Green).
+
+let light = "Red"
+
+switch (light) {
+    case "Red":
+        console.log("Stop")
+        break
+    case "Yellow":
+        console.log("Slow down")
+        break
+    case "Green":
+        console.log("Go")
+        break
+    
+}
+
