@@ -3,7 +3,7 @@
 
 let day = 5
 
-switch (day) {
+switch (day) { 
 
     case 1:
         console.log("Sunday");
@@ -28,7 +28,6 @@ switch (day) {
         break;
     default:
         console.log("Invalid day");
-
 }
 
 // Month Name: Write a JavaScript program that prints the name of the month based on a number input
@@ -72,7 +71,7 @@ switch (season) {
         break;
     default:
         console.log("Invalid season");
-        
+
 }
 
 // Traffic Light:
