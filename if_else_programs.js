@@ -58,3 +58,7 @@ if (year % 4 == 0) {
 //If the age is between 13 and 19, print "Teenager."
 //If the age is between 20 and 59, print "Adult."
 //If the age is 60 or above, print "Senior."
+
+if (grade == "A") {
+    
+}
