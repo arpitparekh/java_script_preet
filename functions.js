@@ -73,13 +73,7 @@ console.log(num)
 
 
 function maulikSirKaNumber(a) {
-    
     return a * 10
-
 }
 
 console.log(maulikSirKaNumber(10));
-
-
-
-
