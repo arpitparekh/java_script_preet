@@ -57,6 +57,7 @@
   <body>
     <input type="number" id="input1" />
     <input type="number" id="input2" />
+    <input type="number" id="input3" />
 
     <div id="buttons">
       <button id="sum" onclick="calculate('sum')">Summation</button>
@@ -71,21 +72,22 @@
       function calculate(a) {
         let number1 = document.getElementById("input1").value; // string
         let number2 = document.getElementById("input2").value; // string
+        let number3 = document.getElementById("input3").value; // string
 
         let result = 0;
 
         switch (a) {
           case "sum":
-            result = parseInt(number1) + parseInt(number2);
+            result = parseInt(number1) + parseInt(number2) + parseInt(number3);
             break;
           case "sub":
-            result = parseInt(number1) - parseInt(number2);
+            result = parseInt(number1) - parseInt(number2) - parseInt(number3);
             break;
           case "mul":
-            result = parseInt(number1) * parseInt(number2);
+            result = parseInt(number1) * parseInt(number2) * parseInt(number3);
             break;
           case "div":
-            result = parseInt(number1) / parseInt(number2);
+            result = parseInt(number1) / parseInt(number2) / parseInt(number3);
             break;
         }
 
