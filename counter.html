@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+      }
+
+      #number {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      div {
+        display: flex;
+        gap: 10px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+
+      button:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="name">Hello Preet</h1>
+    <h1 id="number"></h1>
+    <div>
+      <button id="add" onclick="preetKaCounter('add')">+</button>
+      <button id="reset" onclick="preetKaCounter('reset')">Reset</button>
+      <button id="sub" onclick="preetKaCounter('sub')">-</button>
+    </div>
+    <script>
+      let n = 0;
+      document.getElementById("number").innerHTML = n;
+      document.getElementById("name").style.fontSize = n + "px";
+      document.body.style.backgroundColor = "yellow";
+
+      function preetKaCounter(a) {
+        switch (a) {
+          case "add":
+            n++;
+            document.getElementById("number").innerHTML = n;
+            document.getElementById("name").style.fontSize = n + "px";
+            document.body.style.backgroundColor = "green";
+            break;
+
+          case "reset":
+            n = 0;
+            document.getElementById("number").innerHTML = n;
+            document.getElementById("name").style.fontSize = n + "px";
+            document.body.style.backgroundColor = "yellow";
+            break;
+
+          case "sub":
+            n--;
+            document.getElementById("number").innerHTML = n;
+            document.getElementById("name").style.fontSize = n + "px";
+            document.body.style.backgroundColor = "red";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
