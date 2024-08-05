@@ -69,4 +69,22 @@ arr2 = [34, 43, 34, 5, 67, 7, 8, 8];
 
 console.log(arr1.join("=="));
 
-console.log(arr1.concat(arr2));  // joins the 2 array
+console.log(arr1.concat(arr2)); // joins the 2 array
+
+arr1.shift();
+
+console.log(arr1);
+
+arr2.unshift(99);
+
+console.log(arr2);
+
+delete arr2[5];
+
+console.log(arr2);
+
+data = ["prit", "yuvraj", "yash", "jimit", "krishna", "mohsim"];
+// data.copyWithin(3, 0);
+console.log(data);
+
+console.log(data.slice(5));

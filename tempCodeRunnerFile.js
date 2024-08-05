@@ -1,4 +1,2 @@
- sum = 0;
 
-  for (let i = 1; i <= n; i++) {
-    
+console.log(arr1.concat(arr2));  // joins the 2 array
