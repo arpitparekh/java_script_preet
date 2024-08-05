@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: lightsalmon;
+        font-family: system-ui;
+        text-align: center;
+        align-content: center;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="box"><b>Box</b></h1>
+
+    <script>
+        
+      let box = document.getElementById("box"); // linking html element to javascript
+
+      // lets create all the mouse events on h1 tag
+
+      box.addEventListener("click", function () {
+        console.log("You clicked on the box");
+      });
+
+      box.addEventListener("dblclick", function () {
+        console.log("You double clicked on the box");
+      });
+
+      box.addEventListener("mousedown", function () {
+        console.log("You pressed the mouse down button on the box");
+      });
+
+      box.addEventListener("mouseup", function () {
+        console.log("You pressed the mouse up button on the box");
+      });
+
+      box.addEventListener("mouseover", function () {
+        console.log("You moved your mouse over the box");
+      });
+
+      box.addEventListener("mouseenter", function () {
+        console.log("You entered the box");
+      });
+
+      box.addEventListener("mouseleave", function () {
+        console.log("You left the box");
+      });
+
+      box.addEventListener("wheel", function () {
+        console.log("You scrolled the mouse wheel on the box");
+      });
+
+    </script>
+  </body>
+</html>
