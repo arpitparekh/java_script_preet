@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <label> UserName </label><br />
+      <input type="text" id="username" required /><br />
+      <label> Password </label><br />
+      <input type="text" id="password" required /><br />
+      <label> Confirm Password </label><br />
+      <input type="text" id="confirm" required /><br />
+      <button id="submit">Submit</button>
+    </form>
+
+    <script>
+      let username = document.getElementById("username");
+      let password = document.getElementById("password");
+      let confirm = document.getElementById("confirm");
+      let button = document.getElementById("submit");
+      let form = document.getElementById("myForm");
+
+      form.addEventListener("submit", function () {
+        if (password.value === confirm.value) {
+          alert("UserName : " + username.value + " Password : " + password.value);
+        } else {
+          alert("Passwords do not match");
+        }
+      });
+
+    </script>
+  </body>
+</html>
