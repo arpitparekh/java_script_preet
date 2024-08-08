@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="tag">This is My H1 Tag</h1>
+
+    <input id="input1" type="text" />
+    <input id="input2" type="text" />
+    <input id="input3" type="text" />
+
+    <script>
+        
+      let h1 = document.getElementById("tag");
+      let input1 = document.getElementById("input1");
+      let input2 = document.getElementById("input2");
+      let input3 = document.getElementById("input3");
+      let result1 = "";
+      let result2 = "";
+
+      //   h1.addEventListener("copy", function (event) {
+      //     console.log("copy kiya ree");
+      //   });
+
+      h1.addEventListener("copy", function () {
+        result = window.getSelection().toString();
+        input1.value = result;
+      });
+      h1.addEventListener("cut", function () {
+        result = window.getSelection().toString();
+        input2.value = result;
+      });
+      h1.addEventListener("paste", function () {
+        result = window.getSelection().toString();
+        input3.value = result;
+      });
+
+    </script>
+  </body>
+</html>
