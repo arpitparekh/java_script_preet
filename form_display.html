@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Product</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="date"],
+      input[type="time"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"] {
+        margin-right: 8px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #1976d2;
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="product" action="#">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" /><br /><br />
+
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" /><br /><br />
+
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" /><br /><br />
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" /><br /><br />
+
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" /><br /><br />
+
+      <!-- radio button for veg and non veg -->
+
+      <label for="veg">Veg</label>
+      <input type="radio" id="veg" name="foodType" />
+
+      <label for="nonveg">Non Veg</label>
+      <input type="radio" id="nonveg" name="foodType" /><br /><br />
+
+      <button type="submit" id="add">Submit</button>
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script>
+      let form = document.getElementById("product");
+      let result = document.getElementById("result");
+      let button = document.getElementById("add");
+      let nameObj = document.getElementById("name");
+
+      form.addEventListener("submit", function (event) {
+        let name = nameObj.value;
+        let price = document.getElementById("price").value;
+        let quantity = document.getElementById("quantity").value;
+        let date = document.getElementById("date").value;
+        let time = document.getElementById("time").value;
+
+        let veg = document.getElementById("veg").checked;
+        let nonveg = document.getElementById("nonveg").checked;
+
+
+        
+
+        if (veg) {
+          result.innerHTML = `Name : ${name} | Price : ${price} | Quantity : ${quantity} | Date : ${date} | Time : ${time} | Food Type : Veg`;
+        } else if (nonveg) {
+          result.innerHTML = `Name : ${name} | Price : ${price} | Quantity : ${quantity} | Date : ${date} | Time : ${time} | Food Type : Non Veg`;
+        }
+
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
