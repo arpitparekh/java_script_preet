@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Content</title>
+</head>
+<body>
+    
+    <div id="myDiv"> 
+        <button id="myButton"> Add content </button>
+        <b><p id="count">  </p></b>
+    </div>
+
+    <div id="mainDiv"></div>
+
+    <script>
+
+        let number = 0
+
+        let b = document.getElementById("myButton")
+        b.style.backgroundColor = "lightgrey"
+        b.style.borderRadius = "5px"
+        b.style.border = "0px"
+        b.style.padding = "10px"
+
+
+        let d = document.getElementById("mainDiv")
+        let d1 = document.getElementById("myDiv")
+        d1.style.display = "flex"
+        let p = document.getElementById("count")
+        p.style.marginLeft = "10px"
+        p.innerHTML = "Total Buttons are :"+number;
+
+        b.addEventListener("click",function(){
+
+            // i can create any element using javascript
+            number++
+
+            // let button = document.createElement("button")
+            // button.innerHTML = "Button "+ number 
+            // button.style.margin = "10px"
+            // button.style.backgroundColor = "lightgrey"
+            // button.style.borderRadius = "5px"
+            // button.style.border = "0px"
+            // button.style.padding = "10px"
+            d.appendChild(addButton())
+            p.innerHTML = "Total Buttons are : "+number;
+            
+
+            // for(let i=1;i<=3000;i++){
+            // let button = document.createElement("button")
+            // button.innerHTML = "Button "+ number 
+            // button.style.margin = "10px"
+            // button.style.backgroundColor = "lightgrey"
+            // button.style.borderRadius = "5px"
+            // button.style.border = "0px"
+            // button.style.padding = "10px"
+            // d.appendChild(button)
+            // number++
+            // }
+
+        })
+
+        function addButton(){
+            let button = document.createElement("button")
+            button.innerHTML = "Button "+ number 
+            button.style.margin = "10px"
+            button.style.backgroundColor = "lightgrey"
+            button.style.borderRadius = "5px"
+            button.style.border = "0px"
+            button.style.padding = "10px"
+            return button
+        }
+
+    </script>
+
+
+</body>
+</html>
