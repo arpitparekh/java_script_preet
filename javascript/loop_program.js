@@ -52,12 +52,9 @@ let b = 1      // 1  // 1  // 2  // 3  // 5  // 8
 
 
 for (let x = 1; x <= 5; x++) {
-    
+
     console.log(a); // 0
     c = a+b         // 1a
     a = b           // 1
     b = c           // 1
 }
-
-
-
