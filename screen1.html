@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myform" action="screen2.html">
+      <label> Email </label>
+      <input id="email" type="email" />
+      <label> Password </label>
+      <input id="password" type="password" />
+      <button id="myButton">Send to Another Scrren</button>
+    </form>
+
+    <script>
+      let form = document.getElementById('myform');
+      let email = document.getElementById('email');
+      let password = document.getElementById('password');
+      let button = document.getElementById('myButton');
+
+      button.addEventListener('click', function () {
+        let obj = {
+          email: email.value,
+          password: password.value,
+        };
+
+        localStorage.setItem('data', JSON.stringify(obj));
+        // convert obj into string into string and send it to local storage
+
+        window.location.href = 'screen2.html';
+
+        console.log(obj);
+      });
+    </script>
+  </body>
+</html>

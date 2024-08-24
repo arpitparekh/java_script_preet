@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="display"></h1>
+
+    <script>
+      let h1 = document.getElementById('display');
+
+      let str = localStorage.getItem('data');
+
+      let obj = JSON.parse(str);
+
+      h1.innerHTML = obj.email + ' ' + obj.password;
+    </script>
+  </body>
+</html>
