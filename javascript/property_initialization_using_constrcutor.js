@@ -24,4 +24,3 @@ m1.display()
 
 let m2 = new Movies("Bahubali", 9.2, "Action")
 m2.display()
-

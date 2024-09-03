@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Manipulation</title>
+  </head>
+  <body>
+    <h1 id="main-heading">DOM Manipulation</h1>
+
+    <div id="container"></div>
+
+    <script>
+      // i can change exsisting html tags and its data
+      // i can chnage exsisting html tag properties and styles
+      // i can also create new tag
+      // i can also delete exsisting tag
+      // i can also change exsisting tag attributes
+
+      let h1 = document.getElementById('main-heading');
+      // h1.remove()
+      h1.innerHTML = 'Product List';
+      h1.style.color = 'purple';
+
+      let containerObj = document.getElementById('container');
+      containerObj.style.display = 'flex';
+      containerObj.style.gap = '10px';
+      containerObj.style.flexWrap = 'wrap';
+
+      class Product {
+        constructor(name, price, quantity, image) {
+          this.name = name;
+          this.price = price;
+          this.quantity = quantity;
+          this.image = image;
+        }
+      }
+
+      // i will make a list of object
+
+      productList = [
+        new Product('Pen', 1000, 5, 'https://www.montblanc.com/variants/images/22527730565448096/A/w2500.jpg'),
+        new Product('Pencil', 1200, 15, 'https://picsum.photos/200/300'),
+        new Product('Paper', 100, 20, 'https://picsum.photos/200/300'),
+        new Product('Eraser', 120, 25, 'https://picsum.photos/200/300'),
+        new Product('Sharpner', 150, 15, 'https://picsum.photos/200/300'),
+        new Product('Diary', 1200, 2, 'https://picsum.photos/200/300'),
+      ];
+
+      // i will make a function to create a product card
+      for (let i = 0; i < productList.length; i++) {
+
+        let div = document.createElement('div');
+        div.style.backgroundColor = 'lightblue';
+        div.style.borderRadius = "10px"
+
+
+        let img = document.createElement('img');
+        img.style.width = '200px';
+        img.style.height = '200px';
+        img.src = productList[i].image;
+        img.style.borderRadius = "10px"
+        img.style.margin = " 5px"
+
+        let name = document.createElement('h2');
+        name.innerText = productList[i].name;
+        name.style.textAlign = "center"
+        let price = document.createElement('h3');
+        price.innerText = productList[i].price;
+        price.style.textAlign = "center"
+
+        let quantity = document.createElement('h3');
+        quantity.innerText = productList[i].quantity;
+        quantity.style.textAlign = "center"
+
+
+        div.appendChild(img);
+        div.appendChild(name);
+        div.appendChild(price);
+        div.appendChild(quantity);
+
+        containerObj.appendChild(div);
+      }
+    </script>
+  </body>
+</html>
