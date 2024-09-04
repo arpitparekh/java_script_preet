@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boxes</title>
+</head>
+<body>
+
+  <button id="btn1">Alert Box</button>
+  <button id="btn2">Confirm Box</button>
+  <button id="btn3">Prompt Box</button>
+
+  <script>
+
+    let b1 = document.getElementById("btn1")
+    let b2 = document.getElementById("btn2")
+    let b3 = document.getElementById("btn3")
+
+    b1.addEventListener("click",function(){
+      alert("This is Alter Box")
+    })
+
+    b2.addEventListener("click",function(){
+      result = confirm("do you really want to delete this item?") // result is boolean
+      if(result){
+        alert("item deleted")
+      }else{
+        alert("item not deleted")
+      }
+    })
+
+    b3.addEventListener("click",function(){
+      result = prompt("Please Enter \nName")
+      console.log(result);
+    })
+
+  </script>
+</body>
+</html>
