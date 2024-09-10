@@ -93,54 +93,6 @@
               let form = document.createElement('form');
               form.style.display = 'flex';
               form.style.flexDirection = 'column';
-
-              let name = document.createElement('label');
-              name.innerHTML = 'Name';
-              let nameInput = document.createElement('input');
-              nameInput.type = 'text';
-              nameInput.placeholder = 'Enter Name';
-              nameInput.style.width = '300px';
-              nameInput.style.marginTop = '5px';
-              nameInput.style.marginBottom = '10px';
-
-              let address = document.createElement('label');
-              address.innerHTML = 'Address';
-              let addressInput = document.createElement('input');
-              addressInput.type = 'text';
-              addressInput.placeholder = 'Enter Address';
-              addressInput.style.width = '300px';
-              addressInput.style.marginTop = '5px';
-              addressInput.style.marginBottom = '10px';
-
-              let amount = document.createElement('label');
-              amount.innerHTML = 'Amount';
-              let amountInput = document.createElement('input');
-              amountInput.type = 'number';
-              amountInput.placeholder = 'Enter Amount';
-              amountInput.style.width = '300px';
-              amountInput.style.marginTop = '5px';
-              amountInput.style.marginBottom = '10px';
-
-              button = document.createElement('button');
-              button.innerHTML = 'Submit';
-              button.style.width = '100px';
-
-              form.addEventListener('submit', function () {
-                console.log(nameInput.value);
-                console.log(addressInput.value);
-                console.log(amountInput.value);
-                div.innerHTML = '';
-              });
-
-              form.appendChild(name);
-              form.appendChild(nameInput);
-              form.appendChild(address);
-              form.appendChild(addressInput);
-              form.appendChild(amount);
-              form.appendChild(amountInput);
-              form.appendChild(button);
-
-              div.appendChild(form);
             }
           })
           .catch((error) => {
